@@ -1,0 +1,29 @@
+customers:
+  source_table: KNA1
+  target_table: clients
+  fields:
+    KUNNR: code
+    NAME1: full_name
+    ORT01: city
+    LAND1: country
+    TELF1: phone
+    SMTP_ADDR: email
+
+materials:
+  source_table: MARA
+  target_table: products
+  fields:
+    MATNR: sku
+    MAKTX: name
+    MEINS: unit
+    MTART: category
+
+orders:
+  source_table: VBAK
+  target_table: orders
+  fields:
+    VBELN: number
+    KUNNR: customer_code
+    ERDAT: created
+    NETWR: amount
+    WAERK: currency
